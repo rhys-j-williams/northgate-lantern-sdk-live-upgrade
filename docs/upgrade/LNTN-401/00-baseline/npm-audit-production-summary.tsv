@@ -1,0 +1,17 @@
+high	@angular/common	<19.2.16	-> >=19.2.16	Angular is Vulnerable to XSRF Token Leakage via Protocol-Relative URLs in Angular HTTP Client	12.2.17 via @angular/common
+high	@angular/common	<=18.2.14	-> <0.0.0	@angular/common: Denial of Service (DoS) via OOM in Number Formatting (digitsInfo)	12.2.17 via @angular/common
+high	@angular/common	<=18.2.14	-> <0.0.0	@angular/common: Information Leak via Default Caching of Credentialed Requests in HttpTransferCache	12.2.17 via @angular/common
+high	@angular/common	<=19.2.25	-> <0.0.0	@angular/common: Denial of Service (DoS) via OOM in Date Formatting (formatDate)	12.2.17 via @angular/common
+high	@angular/common	<=19.2.25	-> <0.0.0	@angular/common: Weak 32-Bit Cache Key Hashing in `HttpTransferCache` Leading to Cross-Request Data Leakage and State Poisoning	12.2.17 via @angular/common
+high	@angular/common	<=19.2.25	-> <0.0.0	Angular: Cache-Key Ambiguity in HttpTransferCache Leading to Cross-Request Response Reuse and State Poisoning	12.2.17 via @angular/common
+high	@angular/compiler	<=18.2.14	-> <0.0.0	Angular Stored XSS Vulnerability via SVG Animation, SVG URL and MathML Attributes	12.2.17 via @angular/compiler
+high	@angular/compiler	<=18.2.14	-> <0.0.0	Angular has XSS Vulnerability via Unsanitized SVG Script Attributes	12.2.17 via @angular/compiler
+high	@angular/compiler	<=19.2.25	-> <0.0.0	Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes	12.2.17 via @angular/compiler
+high	@angular/core	<=18.2.14	-> <0.0.0	Angular has XSS Vulnerability via Unsanitized SVG Script Attributes	12.2.17 via @angular/core
+high	@angular/core	<=18.2.14	-> <0.0.0	Angular i18n vulnerable to Cross-Site Scripting	12.2.17 via @angular/core
+high	@angular/core	<=19.2.25	-> <0.0.0	Angular Client Hydration DOM Clobbering & Response-Cache Poisoning	12.2.17 via @angular/core
+high	@angular/core	<=19.2.25	-> <0.0.0	Angular i18n: Cross-Site Scripting (XSS) via event-handler attributes	12.2.17 via @angular/core
+moderate	@angular/compiler	<=18.2.14	-> <0.0.0	Angular: Template and Attribute Namespace Sanitization Bypass (XSS)	12.2.17 via @angular/compiler
+moderate	@angular/compiler	<=19.2.25	-> <0.0.0	@angular/compiler: Two-Way Property Binding Sanitization Bypass (XSS)	12.2.17 via @angular/compiler
+moderate	@angular/core	<=18.2.14	-> <0.0.0	@angular/core: Angular Template and Dynamic Component Namespace Bypass leading to Cross-Site Scripting (XSS)	12.2.17 via @angular/core
+moderate	@angular/core	<=18.2.14	-> <0.0.0	Angular: Template and Attribute Namespace Sanitization Bypass (XSS)	12.2.17 via @angular/core
