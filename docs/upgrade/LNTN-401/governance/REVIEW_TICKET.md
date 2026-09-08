@@ -21,7 +21,7 @@ whose consumer is on Angular 14, and asks for that to be accepted for this hop.
 h2. Where to read
 
 * ADR (branch): https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/blob/feature/LNTN-401-angular-12-to-13/docs/adr/0001-angular-13-partial-ivy.md
-* PR: see `REPORT.md` (link filled in when the PR is open); CODEOWNERS routes `docs/adr/**` to
+* PR: https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/pull/1 ; CODEOWNERS routes `docs/adr/**` to
   `@northgate/cswt-architecture`, whose PR approval is the record
 * Confluence decision page: not created (no Confluence on the connected Atlassian site); paste-ready
   text at `docs/upgrade/LNTN-401/governance/CONFLUENCE_PAGE.md`

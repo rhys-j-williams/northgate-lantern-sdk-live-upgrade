@@ -11,7 +11,7 @@
 | Compliance clock | Angular 12 EOL 2022-11-12; TR-1102 expired 2025-11-12 (ceiling); GIS-2618 open High. Angular 13 EOL 2023-05-04, also past the ceiling: no acceptance requested, `governance/TR_PACK.md` |
 | Release train | requested 2026.09.x; not available (2026.09.2 froze 2026-09-04, 2026.09.4 skipped for Q3 freeze). **2026.10.2** requested in the CAB record (freeze Fri 2026-10-02, CAB Tue 2026-10-06, deploy Thu 2026-10-08) |
 | Stop condition | Stopped at Angular 13 green + PR open. Angular 14 not started. |
-| PR | see `PR_LINK` line at the end of this file (filled in when the PR is open) |
+| PR | https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/pull/1 (into `develop`; open, not merged) |
 
 ## Commits on the branch (all with `AI-Assisted: AIT-014` / `AI-Assisted-Scope:` trailers)
 
@@ -122,4 +122,4 @@ EVIDENCE MISSING (not fabricated): Checkmarx, Xray and Sonar runs (no scanners i
 3. retail-web pin bump 2.4.1 -> 3.0.0 (or straight to 4.0.0 if the hop lands in time) on its own
    CAB record, Medium or above.
 
-PR_LINK: (filled in after the PR is opened)
+PR_LINK: https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/pull/1
