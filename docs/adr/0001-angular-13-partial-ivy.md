@@ -5,7 +5,7 @@
 Status: Proposed
 Date: 2026-09-08
 Deciders: TBC — CSWT Architecture (`@northgate/cswt-architecture`), DAE product owner (TBC), GIS AppSec (`@northgate/gis-appsec`, TBC)
-Tickets: LNTN-401 (epic), Jira keys TBC (see `docs/upgrade/LNTN-401/jira/TICKET_PLAN.md`); related LNTN-140, LNTN-361, GIS-2618, TR-1102
+Tickets: LNTN-401 (epic, bank instance); on the connected site KAN-1 (epic stand-in), KAN-2 (hop story), KAN-4 (this architecture review), KAN-3 (retail-web verification) — see `docs/upgrade/LNTN-401/jira/TICKET_PLAN.md`; related LNTN-140, LNTN-361, GIS-2618, TR-1102
 Supersedes: none (first ADR in this repository; the View Engine decision was recorded only in the README under LNTN-361)
 Superseded by: none
 

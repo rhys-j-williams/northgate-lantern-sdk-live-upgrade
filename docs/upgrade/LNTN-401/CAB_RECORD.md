@@ -27,7 +27,7 @@ Draft status: not submitted. Section-1 fields for the ITSM form are listed separ
 | Business sponsor | TBC (DAE product owner) |
 | Application(s) and CMDB app-id(s) | `@northgate/lantern-sdk` (shared library; CMDB app-id TBC, not found in the repository). Consumer in scope of the follow-on change: retail-web (Northgate Online, app-id TBC). |
 | Environment(s) | Artifactory `npm-northgate` (publish only). No prod-east / prod-west deploy in this change. |
-| Jira release version | not applicable: the connected Jira project (KAN) has no fix versions; train recorded here and in `jira/TICKET_PLAN.md` |
+| Jira release version | not applicable: the connected Jira project (KAN) has no fix versions; train recorded here and in KAN-2 / `jira/TICKET_PLAN.md` |
 | Evidence bundle | `docs/upgrade/LNTN-401/` on branch `feature/LNTN-401-angular-12-to-13` until `Jenkinsfile.release` produces the Artifactory bundle (this repository has no `Jenkinsfile.release`; see EVIDENCE MISSING in `REPORT.md`) |
 
 ## 2. Summary of change
@@ -40,7 +40,8 @@ use from 13 onwards and which an Angular 14 consumer links with its own compiler
 identifier masking on router page events and the `X-Analytics-Session` header are unchanged. This
 change publishes the package to the registry only; the consumer pin bump in retail-web (2.4.1 ->
 3.0.0) is a separate change under MOL/LNTN-401 and rides that deployable's own CAB record. Tickets:
-LNTN-401 (epic), hop story and sub-tasks per `jira/TICKET_PLAN.md`.
+LNTN-401 (epic, bank instance); connected-site keys KAN-1 (epic stand-in), KAN-2 (hop story, sub-tasks
+KAN-5..KAN-12), KAN-3 (retail-web verification), KAN-4 (architecture review) per `jira/TICKET_PLAN.md`.
 
 ## 3. Scope
 

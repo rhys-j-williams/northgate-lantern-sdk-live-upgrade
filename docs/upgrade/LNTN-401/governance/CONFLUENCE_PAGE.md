@@ -67,5 +67,6 @@ Labels: `adr`, `lantern-sdk`, `ai-assisted`. One page per ADR number; update, do
 
 **Related Jira keys**
 
-LNTN-401 (epic, bank instance). Connected-site (KAN) keys: see `docs/upgrade/LNTN-401/jira/TICKET_PLAN.md`
-(filled in after creation). Related: LNTN-140, LNTN-361, GIS-2618, TR-1102, MOL-4471.
+LNTN-401 (epic, bank instance). Connected-site (KAN, `rjwills92.atlassian.net`) keys: KAN-1 (epic stand-in),
+KAN-2 (hop story), KAN-4 (architecture review of this ADR, due 2026-09-23), KAN-3 (retail-web verification);
+full index in `docs/upgrade/LNTN-401/jira/TICKET_PLAN.md`. Related: LNTN-140, LNTN-361, GIS-2618, TR-1102, MOL-4471.

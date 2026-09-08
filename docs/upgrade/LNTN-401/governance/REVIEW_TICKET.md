@@ -4,9 +4,10 @@
 
 Intended: Jira Task in `LNTN`, `Architecture review: ADR 0001 Angular 13 and Ivy partial compilation`,
 linked `relates to` the hop story and LNTN-401, labels `architecture-review`, `ai-assisted`.
-On the connected site this is created in `KAN` as `[LNTN] Architecture review: ADR 0001 Angular 13
-and Ivy partial compilation` with label `estate-LNTN` (row 4 of `../jira/TICKET_PLAN.md`); the KAN
-key is recorded there once created. Unassigned; no reviewer was named.
+On the connected site this was created 2026-09-08 as **KAN-4**
+(https://rjwills92.atlassian.net/browse/KAN-4), summary `[LNTN] Architecture review: ADR 0001 Angular 13
+partial-Ivy build`, labels `estate-LNTN`, `architecture-review`, `ai-assisted`, parent KAN-1, `relates to`
+KAN-2 (hop story), due date 2026-09-23 (row R1 of `../jira/TICKET_PLAN.md`). Unassigned; no reviewer was named.
 
 ---
 

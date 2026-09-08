@@ -1,7 +1,7 @@
 <!-- Generated with AI assistance (AIT-014, register entry unconfirmed) on 2026-09-08; reviewed by TBC. -->
 # LNTN-401 Jira ticket plan: lantern-sdk Angular 12 -> 13 (partial Ivy)
 
-Mode: **create after approval**. Nothing has been created; the table is the plan shown for a "go".
+Mode: **create after approval**. Plan shown 2026-09-08; "go" received 2026-09-08; the 12 KAN issues were created that day through the Atlassian MCP (`createJiraIssue`, `createIssueLink`) and verified by JQL `project = KAN`. Keys are in the table and in the section at the end. G1/G2 remain draft-only (nothing created in GIS).
 
 ## Jira reach (Atlassian MCP `atlassian-86a0`)
 
@@ -17,22 +17,22 @@ The requested train is `2026.09.x`. `RELEASE_CALENDAR.md`: `2026.09.2` froze 202
 
 ## Ticket table
 
-| # | Type | Intended project | Summary (KAN) | Parent / links | Labels | Priority (body) | Train (body) | Action |
-|---|---|---|---|---|---|---|---|---|
-| E | Epic | LNTN | `[LNTN] Lantern SDK Angular catch-up wave (mirror of LNTN-401)` | none | `estate-LNTN`, `angular-upgrade`, `ai-assisted` | High | — | **create** (stand-in for LNTN-401, which is not on this site) |
-| S1 | Story | LNTN | `[LNTN] Upgrade lantern-sdk from Angular 12 to 13` | parent E; blocks T1; relates to R1 | `estate-LNTN`, `angular-upgrade`, `wave-13`, `ai-assisted` | High (GIS-2618 open High; TR-1102 expired 2025-11-12) | 2026.10.2 | **create** |
-| T1 | Task | MOL | `[MOL] Verify retail-web on lantern-sdk 3.0.0 partial Ivy` | parent E; is blocked by S1 | `estate-MOL`, `angular-upgrade`, `wave-13`, `ai-assisted` | High | 2026.10.2 (retail-web pin bump is out of scope of this run) | **create** |
-| R1 | Task | LNTN | `[LNTN] Architecture review: ADR 0001 Angular 13 partial-Ivy build` | parent E; relates to S1 | `estate-LNTN`, `architecture-review`, `ai-assisted` | High | needed by 2026-09-23 (last working day before the Q3 freeze; 2026.09.4 is skipped) | **create** |
-| S1.1 | Subtask | LNTN | `[LNTN] Record Angular 12 baseline for lantern-sdk` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.2 | Subtask | LNTN | `[LNTN] Write compatibility matrix and ADR for Angular 13` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.3 | Subtask | LNTN | `[LNTN] Confirm behaviour specs cover public API before migration` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.4 | Subtask | LNTN | `[LNTN] Commit Angular 13 framework hop with partial Ivy` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.5 | Subtask | LNTN | `[LNTN] Migrate lantern-sdk lint from TSLint to angular-eslint 13` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.6 | Subtask | LNTN | `[LNTN] Green all gates and release lantern-sdk 3.0.0` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| S1.7 | Subtask | LNTN | `[LNTN] Draft CAB record and GIS-STD-022 pack for lantern-sdk 3.0.0` | parent S1 | `estate-LNTN`, `ai-assisted` | — | 2026.10.2 | **create** |
-| S1.8 | Subtask | LNTN | `[LNTN] Open lantern-sdk Angular 13 PR to develop` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
-| G1 | GIS exception request (TECH-STD-044 s4) | GIS | `Exception: 17 npm audit advisories in Angular 13.4.0 (lantern-sdk 3.0.0)` | references S1 | — | High | — | **draft only**, `../governance/GIS_EXCEPTION_DRAFT.md`, for the DAE engineering manager to raise |
-| G2 | GIS-STD-022 risk pack | GIS / Technology Risk | `TR pack: lantern-sdk wrapper Angular 13 remains out of vendor support` | references S1, ADR 0001 | — | High | — | **draft only**, `../governance/TR_PACK.md` (TR-1102 is at the 36-month ceiling; the pack documents the upgrade, no renewal is requested) |
+| # | Key | Type | Intended project | Summary (KAN) | Parent / links | Labels | Priority (body) | Train (body) | Action |
+|---|---|---|---|---|---|---|---|---|---|
+| E | [KAN-1](https://rjwills92.atlassian.net/browse/KAN-1) | Epic | LNTN | `[LNTN] Lantern SDK Angular catch-up wave (mirror of LNTN-401)` | none | `estate-LNTN`, `angular-upgrade`, `ai-assisted` | High | — | **created** (stand-in for LNTN-401, which is not on this site) |
+| S1 | [KAN-2](https://rjwills92.atlassian.net/browse/KAN-2) | Story | LNTN | `[LNTN] Upgrade lantern-sdk from Angular 12 to 13` | parent KAN-1; blocks KAN-3; relates to KAN-4 | `estate-LNTN`, `angular-upgrade`, `wave-13`, `ai-assisted` | High (GIS-2618 open High; TR-1102 expired 2025-11-12) | 2026.10.2 | **created** |
+| T1 | [KAN-3](https://rjwills92.atlassian.net/browse/KAN-3) | Task | MOL | `[MOL] Verify retail-web on lantern-sdk 3.0.0 partial Ivy` | parent KAN-1; is blocked by KAN-2 | `estate-MOL`, `angular-upgrade`, `wave-13`, `ai-assisted` | High | 2026.10.2 (retail-web pin bump is out of scope of this run) | **created** |
+| R1 | [KAN-4](https://rjwills92.atlassian.net/browse/KAN-4) | Task | LNTN | `[LNTN] Architecture review: ADR 0001 Angular 13 partial-Ivy build` | parent KAN-1; relates to KAN-2; due 2026-09-23 | `estate-LNTN`, `architecture-review`, `ai-assisted` | High | needed by 2026-09-23 (last working day before the Q3 freeze; 2026.09.4 is skipped) | **created** |
+| S1.1 | [KAN-5](https://rjwills92.atlassian.net/browse/KAN-5) | Subtask | LNTN | `[LNTN] Record Angular 12 baseline for lantern-sdk` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.2 | [KAN-6](https://rjwills92.atlassian.net/browse/KAN-6) | Subtask | LNTN | `[LNTN] Write compatibility matrix and ADR for Angular 13` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.3 | [KAN-7](https://rjwills92.atlassian.net/browse/KAN-7) | Subtask | LNTN | `[LNTN] Confirm behaviour specs cover public API before migration` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.4 | [KAN-8](https://rjwills92.atlassian.net/browse/KAN-8) | Subtask | LNTN | `[LNTN] Commit Angular 13 framework hop with partial Ivy` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.5 | [KAN-9](https://rjwills92.atlassian.net/browse/KAN-9) | Subtask | LNTN | `[LNTN] Migrate lantern-sdk lint from TSLint to angular-eslint 13` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.6 | [KAN-10](https://rjwills92.atlassian.net/browse/KAN-10) | Subtask | LNTN | `[LNTN] Green all gates and release lantern-sdk 3.0.0` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| S1.7 | [KAN-11](https://rjwills92.atlassian.net/browse/KAN-11) | Subtask | LNTN | `[LNTN] Draft CAB record and GIS-STD-022 pack for lantern-sdk 3.0.0` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | 2026.10.2 | **created** |
+| S1.8 | [KAN-12](https://rjwills92.atlassian.net/browse/KAN-12) | Subtask | LNTN | `[LNTN] Open lantern-sdk Angular 13 PR to develop` | parent KAN-2 | `estate-LNTN`, `ai-assisted` | — | — | **created** |
+| G1 | — | GIS exception request (TECH-STD-044 s4) | GIS | `Exception: 17 npm audit advisories in Angular 13.4.0 (lantern-sdk 3.0.0)` | references S1 | — | High | — | **draft only**, `../governance/GIS_EXCEPTION_DRAFT.md`, for the DAE engineering manager to raise |
+| G2 | — | GIS-STD-022 risk pack | GIS / Technology Risk | `TR pack: lantern-sdk wrapper Angular 13 remains out of vendor support` | references S1, ADR 0001 | — | High | — | **draft only**, `../governance/TR_PACK.md` (TR-1102 is at the 36-month ceiling; the pack documents the upgrade, no renewal is requested) |
 
 Not proposed: a separate "Lantern Ivy" prerequisite story. Angular 13 removes View Engine, so the Ivy partial-compilation move is inseparable from the hop and is scoped inside S1. LNTN-140 (vendor Ivy build) is referenced in the body; it is not on this site and cannot be linked. Lantern 13 -> 14 and Canopy 4 (CNPY-2140) are the next wave steps and are named in the epic body, not ticketed here (one story per hop, created when that hop starts).
 
@@ -67,7 +67,7 @@ Footer on every ticket: `Drafted with AI assistance (AIT-014, register entry unc
 **Context.** retail-web (Angular 14.3.0, Node 16.20.2) is the only live consumer of `@northgate/lantern-sdk` (pinned 2.4.1). Angular 14 consumes partial-Ivy libraries through the linker, so a 13-built package is supported there; this task records the proof and hands the pin bump to `retail-digital`. Evidence produced by S1: `docs/upgrade/LNTN-401/CONSUMERS.md`.
 **Scope.** In: read-only scratch verification of `@northgate/lantern-sdk 3.0.0` from the local registry with `npm run build:prod` and `npm test` in a scratch clone of `northgate-retail-web`; a MOL story to bump the pin `2.4.1 -> 3.0.0` and remove `ngcc` from postinstall when DAE releases. Out: changing retail-web's pin in this run; retail-web's Angular hop.
 **Acceptance criteria.** 1. Scratch install of `@northgate/lantern-sdk@3.0.0` resolves peers with no `--legacy-peer-deps`. 2. `npm run build:prod` exits 0 with zero new warnings and `ngcc` does not process lantern-sdk. 3. `npm test` passes with no spec disabled. 4. Result (supported / unsupported) recorded in `CONSUMERS.md` with log paths. 5. The retail-web pin bump is a separate MOL story riding retail-web's CAB record (GIS-STD-022 s3).
-**Evidence.** `docs/upgrade/LNTN-401/evidence/07-retail-web-scratch/`.
+**Evidence.** `docs/upgrade/LNTN-401/evidence/06-consumer-retail-web/` (created as `06-*`, not `07-*` as first planned), `CONSUMERS.md`.
 **Rollback.** Not applicable: read-only verification; the pin is unchanged.
 **Dependencies.** Is blocked by S1.
 **Governance.** GIS-STD-022 s3 shared-library rule (2.x stays in security support until the last consumer moves or 90 days). TECH-POL-031 footer.
@@ -118,6 +118,23 @@ See `../governance/TR_PACK.md`. TR-1102 expired 2025-11-12 at the thirty-six mon
 - `assignee`: nobody named by the user; left unassigned.
 - Cross-project links to LNTN-401, MOL-4471, LNTN-140, GIS-2618: those projects are not on this site; named in bodies only.
 
-## Keys after creation
+## Keys after creation (2026-09-08)
 
-To be filled after the "go": E `KAN-?`, S1 `KAN-?`, T1 `KAN-?`, R1 `KAN-?`, S1.1..S1.8 `KAN-?`.
+| Plan row | Key | URL |
+|---|---|---|
+| E | KAN-1 | https://rjwills92.atlassian.net/browse/KAN-1 |
+| S1 | KAN-2 | https://rjwills92.atlassian.net/browse/KAN-2 |
+| T1 | KAN-3 | https://rjwills92.atlassian.net/browse/KAN-3 |
+| R1 | KAN-4 | https://rjwills92.atlassian.net/browse/KAN-4 |
+| S1.1 | KAN-5 | https://rjwills92.atlassian.net/browse/KAN-5 |
+| S1.2 | KAN-6 | https://rjwills92.atlassian.net/browse/KAN-6 |
+| S1.3 | KAN-7 | https://rjwills92.atlassian.net/browse/KAN-7 |
+| S1.4 | KAN-8 | https://rjwills92.atlassian.net/browse/KAN-8 |
+| S1.5 | KAN-9 | https://rjwills92.atlassian.net/browse/KAN-9 |
+| S1.6 | KAN-10 | https://rjwills92.atlassian.net/browse/KAN-10 |
+| S1.7 | KAN-11 | https://rjwills92.atlassian.net/browse/KAN-11 |
+| S1.8 | KAN-12 | https://rjwills92.atlassian.net/browse/KAN-12 |
+
+Links created: `KAN-2 blocks KAN-3` (Blocks), `KAN-2 relates to KAN-4` (Relates). Parents: KAN-2/3/4 -> KAN-1; KAN-5..12 -> KAN-2. Due date set on KAN-4 only (2026-09-23). All issues are in `To Do`; none transitioned. Bodies carry the PR URL (https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/pull/1) and a "status at creation" line where the work is already done on the branch.
+
+Hand-offs not created here: G1 (GIS exception) and G2 (TR pack) to the DAE engineering manager / Technology Risk; the cross-site links to LNTN-401, MOL-4471, LNTN-140, GIS-2618 (named in bodies only); the retail-web pin-bump story in MOL (named in KAN-3 AC 5).

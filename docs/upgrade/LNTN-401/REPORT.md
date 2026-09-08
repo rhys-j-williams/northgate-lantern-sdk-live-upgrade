@@ -12,6 +12,7 @@
 | Release train | requested 2026.09.x; not available (2026.09.2 froze 2026-09-04, 2026.09.4 skipped for Q3 freeze). **2026.10.2** requested in the CAB record (freeze Fri 2026-10-02, CAB Tue 2026-10-06, deploy Thu 2026-10-08) |
 | Stop condition | Stopped at Angular 13 green + PR open. Angular 14 not started. |
 | PR | https://github.com/rhys-j-williams/northgate-lantern-sdk-live-upgrade/pull/1 (into `develop`; open, not merged) |
+| Jira (connected site, project KAN) | epic stand-in [KAN-1](https://rjwills92.atlassian.net/browse/KAN-1); hop story [KAN-2](https://rjwills92.atlassian.net/browse/KAN-2) (sub-tasks KAN-5..KAN-12); retail-web verification [KAN-3](https://rjwills92.atlassian.net/browse/KAN-3); architecture review [KAN-4](https://rjwills92.atlassian.net/browse/KAN-4), due 2026-09-23. Index: `jira/TICKET_PLAN.md`. GIS items draft-only. |
 
 ## Commits on the branch (all with `AI-Assisted: AIT-014` / `AI-Assisted-Scope:` trailers)
 
@@ -88,8 +89,8 @@ official migration did this. The alternative (leaving both source and specs at `
 | GIS-STD-022 risk pack | `governance/TR_PACK.md` | draft; no extension requested (ceiling), documents the upgrade |
 | GIS dependency exception (audit advisories) | `governance/GIS_EXCEPTION_DRAFT.md` | draft only, for the DAE engineering manager to raise in GIS |
 | Confluence decision page | `governance/CONFLUENCE_PAGE.md` | paste-ready fallback: connected Atlassian site has no Confluence |
-| Architecture review ticket | `governance/REVIEW_TICKET.md` + `jira/TICKET_PLAN.md` row R1 | body ready; created in KAN only after "go" |
-| Jira ticket set | `jira/TICKET_PLAN.md` | plan shown; **not created yet** (awaiting explicit "go"); keys to be filled in |
+| Architecture review ticket | `governance/REVIEW_TICKET.md` + `jira/TICKET_PLAN.md` row R1 | **created**: KAN-4 (unassigned, due 2026-09-23, relates to KAN-2) |
+| Jira ticket set | `jira/TICKET_PLAN.md` | **created 2026-09-08 after "go"**: KAN-1..KAN-12 via Atlassian MCP, links `KAN-2 blocks KAN-3`, `KAN-2 relates to KAN-4`; priority / component / fix version recorded in bodies (no such fields in KAN); G1/G2 GIS items draft-only, nothing created in GIS |
 | CHANGELOG / README | `CHANGELOG.md` (3.0.0 unreleased), `README.md` | done |
 
 EVIDENCE MISSING (not fabricated): Checkmarx, Xray and Sonar runs (no scanners in the local estate);
