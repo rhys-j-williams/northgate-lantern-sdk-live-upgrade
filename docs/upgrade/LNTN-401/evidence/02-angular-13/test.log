@@ -1,0 +1,14 @@
+$ npm test
+
+> lantern-sdk-workspace@2.4.1 test /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade
+> ng test lantern-sdk --watch=false --browsers=ChromeHeadlessCI
+
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+08 09 2026 16:14:01.270:INFO [karma-server]: Karma v6.3.20 server started at http://localhost:9877/
+08 09 2026 16:14:01.271:INFO [launcher]: Launching browsers ChromeHeadlessCI with concurrency unlimited
+08 09 2026 16:14:01.274:INFO [launcher]: Starting browser ChromeHeadless
+08 09 2026 16:14:01.474:INFO [Chrome Headless 133.0.0.0 (Linux 0.0.0)]: Connected on socket CkBLXUIcPFs4DTeFAAAA with id 10649217
+[1A[2KChrome Headless 133.0.0.0 (Linux 0.0.0): Executed 18 of 18 SUCCESS (0.071 secs / 0.064 secs)
+TOTAL: 18 SUCCESS
+exit=0

@@ -1,0 +1,17 @@
+$ npx ng test lantern-sdk --watch=false --browsers=ChromeHeadlessCI --code-coverage
+- Generating browser application bundles (phase: setup)...
+✔ Browser application bundle generation complete.
+08 09 2026 16:14:07.795:INFO [karma-server]: Karma v6.3.20 server started at http://localhost:9877/
+08 09 2026 16:14:07.812:INFO [launcher]: Launching browsers ChromeHeadlessCI with concurrency unlimited
+08 09 2026 16:14:07.814:INFO [launcher]: Starting browser ChromeHeadless
+08 09 2026 16:14:08.101:INFO [Chrome Headless 133.0.0.0 (Linux 0.0.0)]: Connected on socket l80gCKsTdsmpNca5AAAA with id 92551391
+[1A[2KChrome Headless 133.0.0.0 (Linux 0.0.0): Executed 18 of 18 SUCCESS (0.085 secs / 0.073 secs)
+TOTAL: 18 SUCCESS
+
+=============================== Coverage summary ===============================
+Statements   : 93.75% ( 150/160 )
+Branches     : 79.83% ( 95/119 )
+Functions    : 97.56% ( 40/41 )
+Lines        : 93.28% ( 139/149 )
+================================================================================
+exit=0
