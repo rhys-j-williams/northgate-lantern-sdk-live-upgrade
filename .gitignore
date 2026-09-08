@@ -1,3 +1,4 @@
+/.angular/cache
 node_modules/
 dist/
 tmp/
@@ -17,3 +18,6 @@ Thumbs.db
 !.env.example
 .cx-reports/
 .scannerwork/
+
+# LNTN-401 upgrade evidence is committed on purpose
+!docs/upgrade/**/*.log

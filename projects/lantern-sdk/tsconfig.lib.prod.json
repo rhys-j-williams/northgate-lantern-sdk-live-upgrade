@@ -1,14 +1,12 @@
-/* Production library build. LNTN-201: View Engine output is deliberate, see README "Build format".
- * Do not flip enableIvy without the vendor relationship team in the loop; consumers run ngcc. */
+/* Production library build. LNTN-401: Ivy partial compilation (APF v13), see README "Build format"
+ * and docs/adr/0001-angular-13-partial-ivy.md. Consumers link the declarations at build time. */
 {
   "extends": "./tsconfig.lib.json",
   "compilerOptions": {
     "declarationMap": false
   },
   "angularCompilerOptions": {
-    "enableIvy": false,
-    "skipTemplateCodegen": true,
-    "strictMetadataEmit": true,
+    "compilationMode": "partial",
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true,
     "enableResourceInlining": true

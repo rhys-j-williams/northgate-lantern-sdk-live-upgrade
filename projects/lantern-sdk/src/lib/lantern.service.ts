@@ -27,9 +27,9 @@ export class LanternService {
     @Optional() @Inject(LANTERN_CONFIG) config: LanternConfig | null,
     // typed as Object: View Engine's metadata collector cannot resolve the DOM `Document` type (or
     // `unknown`) in a constructor parameter under strictMetadataEmit, the classic ng-packagr complaint
-    // tslint:disable-next-line:ban-types
+    // eslint-disable-next-line @typescript-eslint/ban-types
     @Inject(DOCUMENT) doc: Object,
-    // tslint:disable-next-line:ban-types
+    // eslint-disable-next-line @typescript-eslint/ban-types
     @Inject(PLATFORM_ID) platformId: Object
   ) {
     this.document = doc as Document;
@@ -63,7 +63,7 @@ export class LanternService {
     const script = this.document.createElement('script');
     script.async = true;
     script.src = this.cfg.scriptUrl;
-    script.setAttribute('data-lantern-sdk', '2.4.1');
+    script.setAttribute('data-lantern-sdk', '3.0.0');
     script.onerror = () => this.debug('vendor script failed to load from ' + this.cfg.scriptUrl);
     (this.document.head || this.document.body).appendChild(script);
     this.debug('vendor script requested from ' + this.cfg.scriptUrl);
@@ -136,7 +136,7 @@ export class LanternService {
     }
     const vendor = installQueueStub(this.win);
     this.debug(method, args);
-    // tslint:disable-next-line:ban-types  the vendor api is loosely typed on purpose
+    // eslint-disable-next-line @typescript-eslint/ban-types -- the vendor api is loosely typed on purpose
     (vendor[method] as Function).apply(vendor, args);
   }
 
@@ -145,7 +145,7 @@ export class LanternService {
       ...(properties || {}),
       app: this.cfg.appName,
       appVersion: this.cfg.appVersion,
-      sdk: '@northgate/lantern-sdk@2.4.1'
+      sdk: '@northgate/lantern-sdk@3.0.0'
     };
   }
 
@@ -190,7 +190,7 @@ export class LanternService {
 
   private debug(message: string, detail?: unknown): void {
     if (this.cfg.debug && this.win && typeof console !== 'undefined') {
-      // tslint:disable-next-line:no-console
+      // eslint-disable-next-line no-console
       console.debug('[lantern-sdk] ' + message, detail === undefined ? '' : detail);
     }
   }

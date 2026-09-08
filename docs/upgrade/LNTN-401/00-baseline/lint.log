@@ -1,0 +1,6 @@
+$ npm run lint
+
+> lantern-sdk-workspace@2.4.1 lint /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade
+> tslint -p tsconfig.json -c tslint.json 'projects/**/*.ts'
+
+exit=0

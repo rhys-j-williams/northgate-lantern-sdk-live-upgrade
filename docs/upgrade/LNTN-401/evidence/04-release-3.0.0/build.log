@@ -1,0 +1,31 @@
+$ npm run build
+
+> lantern-sdk-workspace@3.0.0 build /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade
+> ng build lantern-sdk --configuration production
+
+Building Angular Package
+
+------------------------------------------------------------------------------
+Building entry point '@northgate/lantern-sdk'
+------------------------------------------------------------------------------
+- Compiling with Angular sources in Ivy partial compilation mode.
+✔ Compiling with Angular sources in Ivy partial compilation mode.
+- Generating FESM2020
+✔ Generating FESM2020
+- Generating FESM2015
+✔ Generating FESM2015
+- Copying assets
+✔ Copying assets
+- Writing package manifest
+✔ Writing package manifest
+✔ Built @northgate/lantern-sdk
+
+------------------------------------------------------------------------------
+Built Angular Package
+ - from: /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/projects/lantern-sdk
+ - to:   /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/dist/lantern-sdk
+------------------------------------------------------------------------------
+
+Build at: 2026-09-08T16:22:13.025Z - Time: 3112ms
+
+exit=0

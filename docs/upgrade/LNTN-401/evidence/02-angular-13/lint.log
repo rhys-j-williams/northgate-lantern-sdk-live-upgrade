@@ -1,0 +1,18 @@
+$ npm run lint
+
+> lantern-sdk-workspace@2.4.1 lint /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade
+> tslint -p tsconfig.json -c tslint.json 'projects/**/*.ts'
+
+The 'deprecation' rule threw an error in '/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/projects/lantern-sdk/src/lib/lantern.module.spec.ts':
+TypeError: message.trim is not a function
+    at Function.Rule.FAILURE_STRING (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/tslint/lib/rules/deprecationRule.js:31:81)
+    at cb (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/tslint/lib/rules/deprecationRule.js:58:53)
+    at visitNodes (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30052:30)
+    at Object.forEachChild (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30247:21)
+    at cb (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/tslint/lib/rules/deprecationRule.js:70:23)
+    at visitNode (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30043:24)
+    at Object.forEachChild (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30235:24)
+    at cb (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/tslint/lib/rules/deprecationRule.js:70:23)
+    at visitNode (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30043:24)
+    at Object.forEachChild (/home/ubuntu/repos/northgate-lantern-sdk-live-upgrade/node_modules/typescript/lib/typescript.js:30244:24)
+exit=0

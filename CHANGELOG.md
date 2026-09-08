@@ -2,6 +2,22 @@
 
 DAE keeps this by hand. Ticket keys are LNTN unless stated.
 
+## 3.0.0 - unreleased (target train 2026.10.2, CAB TBC)
+
+Breaking: Angular 13 line, Ivy partial compilation. Consumers must be on Angular 13 or later.
+
+- 401: Angular 12.2.17 -> 13.4.0 (CLI 13.3.11, ng-packagr 13.3.1, TypeScript 4.6.4); Node stays 14.21.3
+- 401: package is built with `compilationMode: "partial"` (Angular Package Format v13, `.mjs` FESM2020 /
+  FESM2015, `exports` map, no UMD, no `*.metadata.json`); consumers no longer need `ngcc` for this
+  package. ADR `docs/adr/0001-angular-13-partial-ivy.md`
+- 401: peer range `@angular/{core,common,router} >=13.0.0 <14.0.0` (was `>=12 <13`); `rxjs` peer unchanged
+- 401: `verify:format` release gate (`scripts/verify-partial-ivy.js`) replaces `verify:view-engine`
+- 401: lint moved from TSLint 6 / codelyzer 6 to angular-eslint 13.5.0 (`npm run lint` is `ng lint`)
+- 401: `sdk` context and the `data-lantern-sdk` script attribute report `3.0.0`
+- no change to `LanternModule.forRoot`, `LanternService`, `LanternRouterTracker`, `lanternTrack`,
+  `LanternSessionInterceptor`, `LANTERN_CONFIG`, `maskPath`, identifier masking or the
+  `X-Analytics-Session` header
+
 ## 2.4.1 - 2024-05-21
 
 - 437: `sessionId()` no longer throws when sessionStorage is disabled by group policy (branch PCs)

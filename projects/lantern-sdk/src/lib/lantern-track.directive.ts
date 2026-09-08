@@ -10,9 +10,6 @@ import { LanternService } from './lantern.service';
  * With no event name we fall back to the element's data-lantern-event attribute, then to
  * `click:<tag>#<id>`; the fallback exists because the Canopy button wrapped the host element and
  * the attribute did not always land where people expected (CNPY-1032).
- *
- * Note for the migration: this is a View Engine directive with a HostListener; the metadata.json
- * that ngcc needs to process it comes out of the prod build (see tsconfig.lib.prod.json).
  */
 @Directive({
   selector: '[lanternTrack]',
