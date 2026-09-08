@@ -1,6 +1,6 @@
 {
   "name": "@northgate/lantern-sdk",
-  "version": "2.4.1",
+  "version": "3.0.0",
   "description": "Angular wrapper for the Lumenview Lantern analytics vendor script (LanternModule.forRoot, LanternService, router page tracking, lanternTrack directive, session header interceptor). Owned by Digital Analytics Enablement.",
   "license": "UNLICENSED",
   "private": false,

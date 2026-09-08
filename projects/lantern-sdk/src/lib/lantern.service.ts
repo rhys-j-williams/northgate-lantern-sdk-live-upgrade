@@ -63,7 +63,7 @@ export class LanternService {
     const script = this.document.createElement('script');
     script.async = true;
     script.src = this.cfg.scriptUrl;
-    script.setAttribute('data-lantern-sdk', '2.4.1');
+    script.setAttribute('data-lantern-sdk', '3.0.0');
     script.onerror = () => this.debug('vendor script failed to load from ' + this.cfg.scriptUrl);
     (this.document.head || this.document.body).appendChild(script);
     this.debug('vendor script requested from ' + this.cfg.scriptUrl);
@@ -145,7 +145,7 @@ export class LanternService {
       ...(properties || {}),
       app: this.cfg.appName,
       appVersion: this.cfg.appVersion,
-      sdk: '@northgate/lantern-sdk@2.4.1'
+      sdk: '@northgate/lantern-sdk@3.0.0'
     };
   }
 

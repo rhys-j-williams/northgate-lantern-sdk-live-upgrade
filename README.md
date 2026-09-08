@@ -5,8 +5,9 @@ Enablement (DAE)**, Charlotte. Slack `#dae-lantern`, Jira `LNTN`. On-call is bus
 analytics is not a P1 service and nobody should be paged for it (see the SLO exemption in
 `RISK-2019-118`).
 
-Current release: **2.4.1** (H1 2024 train). Next planned: 2.5.0, H2 2024 train, scope in
-`LNTN-455`.
+Current release: **2.4.1** (H1 2024 train, Angular 12 / View Engine). In progress: **3.0.0**
+(`LNTN-401`, Angular 13 / Ivy partial compilation, target train 2026.10.2, CAB TBC). Next hop after
+that: Angular 13 -> 14 (`LNTN-401` epic), ahead of the estate's 14 -> 15 wave.
 
 ## What it does
 
@@ -23,12 +24,14 @@ Consumers: retail-web (Northgate Online), business-web (Northgate Business), Bea
 ## Installing
 
 ```
-npm install @northgate/lantern-sdk@2.4.1 --save-exact
+npm install @northgate/lantern-sdk@3.0.0 --save-exact
 ```
 
-From Artifactory `npm-northgate`. Peer range is Angular 12 (see below). If npm complains about
-peers on your application's Angular, put `legacy-peer-deps=true` in the application's `.npmrc`;
-retail-web and business-web already have it.
+From Artifactory `npm-northgate`. Peer range is Angular `>=13.0.0 <14.0.0` for 3.0.0 (2.4.1 was
+`>=12 <13`). If npm complains about peers on your application's Angular, put
+`legacy-peer-deps=true` in the application's `.npmrc`; retail-web and business-web already have it.
+An Angular 14 application can consume 3.0.0 (the partial-Ivy output is linked by its own CLI, see
+`docs/upgrade/LNTN-401/CONSUMERS.md`); an Angular 12 application cannot, stay on 2.4.1 there.
 
 ```ts
 // app.module.ts
@@ -103,32 +106,40 @@ them in application code.
 
 ## Build and release
 
-Node **14.21.3** (`.nvmrc`), Angular **12.2.17**, ng-packagr **12.2.7**, TypeScript 4.3.5.
+Node **14.21.3** (`.nvmrc`), Angular **13.4.0**, Angular CLI 13.3.11, ng-packagr **13.3.1**,
+TypeScript 4.6.4, angular-eslint 13.5.0.
 
 ```
 nvm use
 npm ci
-npm run lint
+npm run lint        # ng lint (angular-eslint)
 npm test            # Karma, ChromeHeadless; CHROME_BIN if Chrome is somewhere odd
 npm run build       # ng-packagr, production config
-npm run verify:view-engine
+npm run verify:format
 npm run publish:local   # build, verify, pack, publish to the registry in .npmrc
 ```
 
-The library is built with **Angular 12 and View Engine** (`enableIvy: false` in
-`tsconfig.lib.prod.json`), and that is the supported output format for this line. It gives the
-widest consumer compatibility across the estate's application versions: an Angular 12 or 14
-application consumes the package through ngcc at install time with no action from the app team,
-which is why `postinstall` scripts in retail-web and business-web run `ngcc` already. The
-`verify:view-engine` step is in the Jenkins job and fails the release if the output ever changes
-format. Ivy/partial output was assessed under `LNTN-361` and deferred: it needs the vendor script
-type contract re-signed and an updated Third Party Risk assessment for the SDK line, both of which
-sit with the Vendor Relationship team rather than with DAE or the application teams. Tracked
-against the H1 2025 train.
+### Build format
 
-`@types/node` is pinned to 16.18.11. Newer `@types/node` declare `Disposable`, which TS 4.3 cannot
-parse. Do not let Renovate move it (there is a rule, check `renovate.json` in platform-tooling if
-it starts bumping again).
+From 3.0.0 the library is built with **Angular 13 and Ivy partial compilation**
+(`compilationMode: "partial"` in `tsconfig.lib.prod.json`, Angular Package Format v13: `.mjs`
+FESM2020/FESM2015 bundles, an `exports` map, no UMD, no `*.metadata.json`). The consuming
+application's own Angular compiler links the `ɵɵngDeclare*` declarations at build time, so `ngcc`
+is no longer needed for this package (retail-web's `postinstall` ngcc run is harmless and stays for
+its other dependencies). `npm run verify:format` (`scripts/verify-partial-ivy.js`) is the release
+gate and fails the publish if the output is View Engine, fully compiled Ivy, built by a compiler
+outside 13.x, or missing any of the seven public API symbols. Decision record:
+`docs/adr/0001-angular-13-partial-ivy.md`; the View Engine deferral (`LNTN-361`, vendor script type
+contract and Third Party Risk assessment) is recorded there as an open item for the architecture
+review, not as resolved.
+
+2.4.1 and earlier were Angular 12 / View Engine (`enableIvy: false`, `verify:view-engine`) and
+remain published for Angular 12 consumers.
+
+`@types/node` is pinned to 16.18.11. It was originally held there because newer `@types/node`
+declare `Disposable`, which TS 4.3 could not parse; TS 4.6 can, but the pin stays exact per
+TECH-STD-044 until a ticket moves it. Do not let Renovate move it (there is a rule, check
+`renovate.json` in platform-tooling if it starts bumping again).
 
 ### Release cadence
 
@@ -153,4 +164,5 @@ during the release window, app teams merge them. History in `CHANGELOG.md`.
 Started 2020 as an inline snippet in retail-web, extracted to a library in early 2021 after
 business-web copied the snippet and diverged (`LNTN-101`). 1.x was the un-scoped `lantern-angular`
 package; 2.0 (Nov 2021) renamed it to `@northgate/lantern-sdk` and moved to Angular 12. 2.2 added the
-router masking after GIS-1471. 2.4 is the current line.
+router masking after GIS-1471. 2.4 is the current published line. 3.0 (`LNTN-401`, in progress) moves
+to Angular 13 and Ivy partial compilation; the upgrade evidence is under `docs/upgrade/LNTN-401/`.
