@@ -1,0 +1,15 @@
+--- phase A: baseline, pinned lantern-sdk 2.4.1
+a-refresh-northgate-lock-entries exit=0
+a-npm-ci exit=0
+a-npm-ls-lantern exit=1
+a-build-prod exit=0
+a-test-ci exit=0
+--- phase B: @northgate/lantern-sdk 3.0.0 from http://localhost:4873 (scratch only, pin not committed)
+b-npm-install exit=0
+b-git-diff exit=0
+b-npm-ls-lantern exit=1
+b-lantern-manifest exit=0
+b-lantern-no-metadata exit=0
+b-build-prod exit=0
+b-test-ci exit=0
+--- done

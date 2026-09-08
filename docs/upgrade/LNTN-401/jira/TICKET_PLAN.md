@@ -22,7 +22,7 @@ The requested train is `2026.09.x`. `RELEASE_CALENDAR.md`: `2026.09.2` froze 202
 | E | Epic | LNTN | `[LNTN] Lantern SDK Angular catch-up wave (mirror of LNTN-401)` | none | `estate-LNTN`, `angular-upgrade`, `ai-assisted` | High | — | **create** (stand-in for LNTN-401, which is not on this site) |
 | S1 | Story | LNTN | `[LNTN] Upgrade lantern-sdk from Angular 12 to 13` | parent E; blocks T1; relates to R1 | `estate-LNTN`, `angular-upgrade`, `wave-13`, `ai-assisted` | High (GIS-2618 open High; TR-1102 expired 2025-11-12) | 2026.10.2 | **create** |
 | T1 | Task | MOL | `[MOL] Verify retail-web on lantern-sdk 3.0.0 partial Ivy` | parent E; is blocked by S1 | `estate-MOL`, `angular-upgrade`, `wave-13`, `ai-assisted` | High | 2026.10.2 (retail-web pin bump is out of scope of this run) | **create** |
-| R1 | Task | LNTN | `[LNTN] Architecture review: ADR 0001 Angular 13 partial-Ivy build` | parent E; relates to S1 | `estate-LNTN`, `architecture-review`, `ai-assisted` | High | needed by 2026-09-21 (one train before CAB 2026-10-06) | **create** |
+| R1 | Task | LNTN | `[LNTN] Architecture review: ADR 0001 Angular 13 partial-Ivy build` | parent E; relates to S1 | `estate-LNTN`, `architecture-review`, `ai-assisted` | High | needed by 2026-09-23 (last working day before the Q3 freeze; 2026.09.4 is skipped) | **create** |
 | S1.1 | Subtask | LNTN | `[LNTN] Record Angular 12 baseline for lantern-sdk` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
 | S1.2 | Subtask | LNTN | `[LNTN] Write compatibility matrix and ADR for Angular 13` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
 | S1.3 | Subtask | LNTN | `[LNTN] Confirm behaviour specs cover public API before migration` | parent S1 | `estate-LNTN`, `ai-assisted` | — | — | **create** |
@@ -76,7 +76,7 @@ Footer on every ticket: `Drafted with AI assistance (AIT-014, register entry unc
 
 **Context.** ADR 0001 (`docs/adr/0001-angular-13-partial-ivy.md`, Proposed) moves lantern-sdk to Angular 13 partial Ivy as a transit major, arguing explicitly against Architecture's "current major at time of upgrade" position (CSWT-ARCH minutes 2026-01-15) because a library must be consumable by its Angular 14 consumer and each hop is gated separately. Review is via CODEOWNERS (`@northgate/cswt-architecture`) on the hop PR; Confluence page paste-ready at `docs/upgrade/LNTN-401/governance/CONFLUENCE_PAGE.md` (no Confluence access on this site).
 **Scope.** In: approve or reject ADR 0001 and the wave order in it. Out: the CAB decision (separate), retail-web's ADR 0014 supersession (MOL).
-**Acceptance criteria.** 1. Architecture approval on the PR from a reviewer who is not the prompter, or written rejection with reasons. 2. ADR status changed by a human only. 3. Decision needed by 2026-09-21 (one train before CAB 2026-10-06).
+**Acceptance criteria.** 1. Architecture approval on the PR from a reviewer who is not the prompter, or written rejection with reasons. 2. ADR status changed by a human only. 3. Decision needed by 2026-09-23 (last working day before the Q3 freeze; 2026.09.4 is skipped).
 **Evidence.** PR URL (added after opening), `docs/upgrade/LNTN-401/governance/`.
 **Rollback.** Not applicable.
 **Dependencies.** Relates to S1; parent E.

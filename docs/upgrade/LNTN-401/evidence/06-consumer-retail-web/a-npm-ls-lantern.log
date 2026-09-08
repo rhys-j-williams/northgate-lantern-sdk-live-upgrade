@@ -1,0 +1,54 @@
+@northgate/retail-web@14.31.2 /home/ubuntu/lntn401-logs/retail-web-scratch
+├─┬ @angular/animations@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/cdk@14.2.7
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/common@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/compiler@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├── @angular/core@14.3.0
+├─┬ @angular/flex-layout@14.0.0-beta.41
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/forms@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/material-moment-adapter@14.2.7
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/material@14.2.7
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/platform-browser-dynamic@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/platform-browser@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/router@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @angular/service-worker@14.3.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @ngrx/effects@14.3.3
+│ └── @angular/core@14.3.0 deduped
+├─┬ @ngrx/entity@14.3.3
+│ └── @angular/core@14.3.0 deduped
+├─┬ @ngrx/router-store@14.3.3
+│ └── @angular/core@14.3.0 deduped
+├─┬ @ngrx/store@14.3.3
+│ └── @angular/core@14.3.0 deduped
+├─┬ @ngx-translate/core@14.0.0
+│ └── @angular/core@14.3.0 deduped
+├─┬ @northgate/canopy-ui@3.7.2
+│ └── @angular/core@14.3.0 deduped
+├─┬ @northgate/lantern-sdk@2.4.1
+│ └── @angular/core@14.3.0 deduped invalid: ">=12.0.0 <13.0.0" from node_modules/@northgate/lantern-sdk
+├─┬ angular-oauth2-oidc@14.0.1
+│ └── @angular/core@14.3.0 deduped invalid: ">=12.0.0 <13.0.0" from node_modules/@northgate/lantern-sdk
+├─┬ ng2-charts@4.1.1
+│ └── @angular/core@14.3.0 deduped invalid: ">=12.0.0 <13.0.0" from node_modules/@northgate/lantern-sdk
+├─┬ ngx-cookie-service@14.0.1
+│ └── @angular/core@14.3.0 deduped invalid: ">=12.0.0 <13.0.0" from node_modules/@northgate/lantern-sdk
+└─┬ ngx-mask@14.3.3
+  └── @angular/core@14.3.0 deduped invalid: ">=12.0.0 <13.0.0" from node_modules/@northgate/lantern-sdk
+
+npm ERR! code ELSPROBLEMS
+npm ERR! invalid: @angular/core@14.3.0 /home/ubuntu/lntn401-logs/retail-web-scratch/node_modules/@angular/core
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ubuntu/.npm/_logs/2026-09-08T16_31_03_128Z-debug-0.log
