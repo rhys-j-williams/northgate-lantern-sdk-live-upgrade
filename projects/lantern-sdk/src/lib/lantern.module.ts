@@ -30,7 +30,7 @@ export class LanternModule {
     @Optional() tracker: LanternRouterTracker | null
   ) {
     // tracker is injected only so forRoot() instantiates it eagerly; nothing to do with it here
-    // tslint:disable-next-line:no-unused-expression
+    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     void tracker;
     if (parent && self) {
       throw new Error('LanternModule.forRoot() imported twice. Import it in AppModule only.');

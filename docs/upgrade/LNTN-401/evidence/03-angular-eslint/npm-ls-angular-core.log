@@ -1,0 +1,5 @@
+$ npm ls @angular/core
+lantern-sdk-workspace@2.4.1 /home/ubuntu/repos/northgate-lantern-sdk-live-upgrade
+└── @angular/core@13.4.0 
+
+exit=0

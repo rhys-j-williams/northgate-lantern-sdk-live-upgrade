@@ -1,0 +1,26 @@
+{
+  "extends": "../../.eslintrc.json",
+  "ignorePatterns": ["!**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["projects/lantern-sdk/tsconfig.lib.json", "projects/lantern-sdk/tsconfig.spec.json"],
+        "createDefaultProgram": true
+      },
+      "rules": {}
+    },
+    {
+      "files": ["*.spec.ts"],
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "no-console": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "rules": {}
+    }
+  ]
+}
